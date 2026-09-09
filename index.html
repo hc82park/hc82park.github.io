@@ -1,7 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="박효찬의 개인 홈페이지">
+  <title>박효찬 | 개인 홈페이지</title>
+  <style>
+    :root { --ink:#1e2b40; --muted:#65738a; --accent:#3d7ee8; --surface:#fff; --background:#f8fbff; --line:#e8eef7; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--background); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.7; }
+    .wrap { width:min(100% - 64px, 1120px); margin:0 auto; }
+    header { background:rgba(255,255,255,.82); border-bottom:1px solid var(--line); }
+    nav { display:flex; align-items:center; justify-content:space-between; min-height:70px; gap:18px; }
+    .logo { color:var(--ink); font-size:.95rem; font-weight:750; text-decoration:none; }
+    .nav-links { display:flex; gap:20px; list-style:none; margin:0; padding:0; }
+    .nav-links a { color:var(--muted); font-size:.94rem; font-weight:600; text-decoration:none; }
+    .nav-links a:hover, .nav-links a:focus { color:var(--accent); }
+    main { padding:0 0 78px; }
+    .hero { display:grid; grid-template-columns:minmax(0, 1fr) 290px; align-items:center; gap:72px; min-height:520px; padding:72px; background:linear-gradient(115deg, #edf5ff 0%, #f9fcff 62%, #f2f7ff 100%); }
+    h1 { margin:0; color:var(--ink); font-size:clamp(2.8rem, 6.2vw, 4.8rem); font-weight:650; line-height:1.05; letter-spacing:-.065em; }
+    .intro { max-width:500px; margin:24px 0 0; color:var(--muted); font-size:clamp(1rem, 2vw, 1.14rem); line-height:1.55; opacity:1; }
+    .profile-image { display:block; width:240px; aspect-ratio:4 / 5; margin-left:auto; border:1px solid #dfe8f5; border-radius:2px; object-fit:cover; object-position:center top; box-shadow:0 12px 30px rgba(67,91,125,.12); }
+    .hero-contact { margin:32px 0 0; color:var(--muted); font-size:.96rem; }
+    .hero-contact a { color:var(--accent); font-weight:700; text-decoration:none; }
+    .hero-contact a:hover, .hero-contact a:focus { text-decoration:underline; }
+    section { margin-top:68px; }
+    h2 { margin:0 0 20px; font-size:1.55rem; letter-spacing:-.03em; }
+    .card { padding:28px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .card p { margin:0; color:var(--muted); }
+    .interests { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+    .interest { padding:21px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .interest strong { display:block; margin-bottom:5px; }
+    .interest span { color:var(--muted); font-size:.92rem; }
+    footer { padding:26px 0 42px; color:var(--muted); font-size:.9rem; text-align:center; }
+    @media (max-width:720px) { .wrap { width:min(100% - 32px, 1120px); } nav { min-height:60px; } .nav-links { gap:13px; font-size:.88rem; } .hero { grid-template-columns:minmax(0, 1fr) 128px; gap:20px; min-height:auto; padding:48px 24px; } .profile-image { width:128px; margin-left:auto; } .hero-contact { margin-top:24px; line-height:1.5; } section { margin-top:46px; } .interests { grid-template-columns:1fr; } }
+  </style>
+</head>
 <body>
-  <h1>안녕하세요, 제 홈페이지입니다</h1>
-  <p>GitHub Pages로 만들었습니다!</p>
+  <header>
+    <nav class="wrap" aria-label="주요 메뉴">
+      <a class="logo" href="#top">박효찬</a>
+      <ul class="nav-links"><li><a href="#top">소개</a></li><li><a href="#interests">관심사</a></li></ul>
+    </nav>
+  </header>
+  <main id="top" class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">박효찬</h1>
+        <p class="intro">서울대 첨단융합학부에서 물리·수학·컴퓨팅을 넘나들며 공부하고 있습니다. 반도체 산업, 데이터 과학 쪽 진로에 관심이 많습니다.</p>
+        <p class="hero-contact">연락은 <a href="mailto:justinhyochan82@snu.ac.kr">justinhyochan82@snu.ac.kr</a>로 보내 주세요.</p>
+      </div>
+      <img class="profile-image" src="profile-placeholder.png" alt="기본 프로필 일러스트">
+    </section>
+    <section id="interests" aria-labelledby="interests-title">
+      <h2 id="interests-title">관심사</h2>
+      <div class="interests">
+        <article class="interest"><strong>배움</strong><span>새로운 지식과 경험</span></article>
+        <article class="interest"><strong>기록</strong><span>생각과 일상의 아카이브</span></article>
+        <article class="interest"><strong>만들기</strong><span>아이디어를 결과물로</span></article>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap">© 2026 박효찬. All rights reserved.</footer>
 </body>
 </html>
